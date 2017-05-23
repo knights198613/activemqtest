@@ -6,4 +6,10 @@ package com.jiangwei.activemqtest.mqutils.service;
  * Desc: 消息发送方
  */
 public interface MqSender {
+
+    /**
+     * 发送消息的方法
+     * @param message
+     */
+    public void sendMessage(Object message);
 }
