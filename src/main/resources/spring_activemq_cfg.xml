@@ -3,4 +3,18 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
+    <bean id="activeMQConnectionFactory" class="org.apache.activemq.ActiveMQConnectionFactory">
+        <property name="brokerURL" value="${broker.url}"></property>
+    </bean>
+
+    <bean id="activeMQDestination" class="org.apache.activemq.command.ActiveMQDestination">
+        <constructor-arg name="name" value="${queue.name}"/>
+    </bean>
+
+    <bean id="myJMStemplate" class="org.springframework.jms.core.JmsTemplate">
+        <property name="connectionFactory" ref="activeMQConnectionFactory"/>
+        <property name="defaultDestination" ref="activeMQDestination"/>
+    </bean>
+
+
 </beans>
