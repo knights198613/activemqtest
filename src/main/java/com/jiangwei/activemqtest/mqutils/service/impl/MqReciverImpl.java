@@ -26,5 +26,6 @@ public class MqReciverImpl implements MqReciver, MessageListener {
                 LOGGER.error("mq recive message has error, error:{}", e);
             }
         }
+        throw new RuntimeException("·¢Éú´íÎó");
     }
 }

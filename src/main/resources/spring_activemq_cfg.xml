@@ -16,7 +16,7 @@
         <property name="defaultDestination" ref="activeMQDestination"/>
     </bean>
 
-    <jmq:listener-container connection-factory="activeMQConnectionFactory">
+    <jmq:listener-container connection-factory="activeMQConnectionFactory" acknowledge="client">
         <jmq:listener destination="${queue.name}" ref="mqReciver"/>
     </jmq:listener-container>
 </beans>
