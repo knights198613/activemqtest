@@ -3,12 +3,12 @@ package com.jiangwei.activemqtest.mqutils.service;
 /**
  * Created by weijiang
  * Date: 2017/5/23
- * Desc: ÏûÏ¢·¢ËÍ·½
+ * Desc: å‘é€æ¶ˆæ¯æ¥å£
  */
 public interface MqSender {
 
     /**
-     * ·¢ËÍÏûÏ¢µÄ·½·¨
+     * å‘é€æ¶ˆæ¯æ–¹æ³•
      * @param message
      */
     public void sendMessage(Object message);
