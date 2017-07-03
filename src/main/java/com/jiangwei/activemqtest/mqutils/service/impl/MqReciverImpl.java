@@ -14,7 +14,7 @@ import javax.jms.*;
  * Desc:
  */
 @Component("mqReciver")
-public class MqReciverImpl implements MqReciver, MessageListener {
+public class MqReciverImpl implements MqReciver{
     private static final Logger LOGGER = LoggerFactory.getLogger(MqReciverImpl.class);
 
     public void onMessage(Message message) {
