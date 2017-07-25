@@ -1,5 +1,7 @@
 package com.jiangwei.activemqtest.bean;
 
+import com.jiangwei.activemqtest.Messages.MqMessage;
+
 import java.io.Serializable;
 
 /**
@@ -7,8 +9,9 @@ import java.io.Serializable;
  * Date: 2017/5/23
  * Desc:
  */
-public class Product implements Serializable {
-    private static final long serialVersionUID = 2803103853645147136L;
+public class Product implements MqMessage {
+
+    private static final long serialVersionUID = -5518732483154270863L;
 
     private String productName;
 

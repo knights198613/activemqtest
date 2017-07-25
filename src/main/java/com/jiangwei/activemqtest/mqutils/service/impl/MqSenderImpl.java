@@ -1,6 +1,7 @@
 package com.jiangwei.activemqtest.mqutils.service.impl;
 
 import com.alibaba.fastjson.JSON;
+import com.jiangwei.activemqtest.Messages.MqMessage;
 import com.jiangwei.activemqtest.mqutils.service.MqSender;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -22,7 +23,7 @@ public class MqSenderImpl implements MqSender{
     private JmsTemplate myJMStemplate;
 
 
-    public void sendMessage(Object message) {
+    public void sendMessage(MqMessage message) {
         try {
             myJMStemplate.convertAndSend(message);
         } catch (JmsException e) {
