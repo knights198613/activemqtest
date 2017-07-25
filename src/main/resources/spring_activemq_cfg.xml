@@ -26,6 +26,6 @@
         <property name="brokerUrl" value="${broker.url}"></property>
         <property name="userName" value="${broker.username}"></property>
         <property name="passWord" value="${broker.password}"></property>
-        <property name="queueName" value="${queue.name}"></property>
+        <property name="queueName" value="${queue.name2}"></property>
     </bean>
 </beans>

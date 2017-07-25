@@ -12,7 +12,7 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 /**
  * Created by weijiang
  * Date: 2017/5/23
- * Desc: mq·¢ËÍ¶Ë²âÊÔÀà
+ * Desc: mqï¿½ï¿½ï¿½Í¶Ë²ï¿½ï¿½ï¿½ï¿½ï¿½
  */
 
 @RunWith(SpringJUnit4ClassRunner.class)
@@ -28,6 +28,10 @@ public class MqSenderTest {
         product.setProductName("apple");
         product.setProduceFactory("beijingCountry");
 
-        mqSender.sendMessage(new String("sssssss"));
+        try {
+            mqSender.sendMessage(product);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 }

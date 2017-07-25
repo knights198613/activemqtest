@@ -31,13 +31,15 @@ public class MqSenderBaseImpl implements MqSender {
     public void init() throws Exception {
         ConnectionFactory connectionFactory = new ActiveMQConnectionFactory(userName, passWord, brokerUrl);
         Connection connection = connectionFactory.createConnection();
-        session = connection.createSession(true, Session.CLIENT_ACKNOWLEDGE);
+        connection.start();
+        session = connection.createSession(true, Session.AUTO_ACKNOWLEDGE);
         destination = new ActiveMQQueue(queueName);
         messageProducer = session.createProducer(destination);
     }
 
     public void sendMessage(MqMessage message) throws Exception{
         messageProducer.send(session.createObjectMessage(message));
+        session.commit();
     }
 
 

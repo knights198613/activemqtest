@@ -10,7 +10,7 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 /**
  * Created by weijiang
  * Date: 2017/5/23
- * Desc: mq½ÓÊÜ¶Ë²âÊÔ
+ * Desc: mq æ¥æ”¶ç«¯æµ‹è¯•
  */
 
 @RunWith(SpringJUnit4ClassRunner.class)
