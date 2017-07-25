@@ -19,4 +19,13 @@
     <jmq:listener-container connection-factory="activeMQConnectionFactory" acknowledge="client">
         <jmq:listener destination="${queue.name}" ref="mqReciver"/>
     </jmq:listener-container>
+
+
+    <!--直接使用 activemq api -->
+    <bean id="mqSenderBase" class="com.jiangwei.activemqtest.mqutils.service.impl.MqSenderBaseImpl" init-method="init">
+        <property name="brokerUrl" value="${broker.url}"></property>
+        <property name="userName" value="${broker.username}"></property>
+        <property name="passWord" value="${broker.password}"></property>
+        <property name="queueName" value="${queue.name}"></property>
+    </bean>
 </beans>
